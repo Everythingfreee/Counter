@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            background-color: gray;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .container{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 50px;
+        }
+        .buttons{
+            border: none;
+            border-radius: 15px;
+            font-size: 30px;
+        }
+        #reset{
+            background-color: red;
+            font-size: 30px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            padding: 5px;
+            transition: 0.2s;
+        }
+        #reset:hover{
+            background-color: rgb(170, 0, 0);
+            font-size: 25px;
+            border-radius: 20px;
+        }
+        #reset:active{
+            background-color: rgb(99, 0, 0);
+            font-size: 20px;
+            border-radius: 25px;
+        }
+        button{
+            background-color: blue;
+            font-size: 30px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            padding: 5px;
+            transition: 0.2s;
+        }
+        button:hover{
+            background-color: rgb(0, 89, 255);
+            font-size: 25px;
+            border-radius: 20px;
+        }
+        button:active{
+            background-color: rgb(103, 103, 255);
+            font-size: 20px;
+            border-radius: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="count">0</h1>
+        <div class="buttons">
+            <button id="decrease">Decrease</button>
+            <button id="reset">Reset</button>
+            <button id="encrease">Encrease</button>
+        </div>
+    </div>
+    <script>
+        let h = document.getElementById("count").value;
+        let d = document.getElementById("decrease");
+        let r = document.getElementById("reset");
+        let e = document.getElementById("encrease");
+        let w = 0;
+
+        d.onclick = function(){
+            w--;
+            let q = document.getElementById("count").textContent =  w;
+        }
+        
+        r.onclick = function(){
+            w=0;
+            let c = document.getElementById("count").textContent = w;
+        }
+        e.onclick = function(){
+            w++;
+            let f = document.getElementById("count").textContent = w;
+        }
+    </script>
+</body>
+</html>
